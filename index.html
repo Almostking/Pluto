@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pluto Torres — Ficha de identificación</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f4f1eb;
+      color: #222;
+      min-height: 100vh;
+    }
+    .page { max-width: 480px; margin: 0 auto; padding: 1rem; }
+
+    .hero { border-radius: 18px; overflow: hidden; margin-bottom: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
+    .hero img { width: 100%; height: 300px; object-fit: cover; object-position: center top; display: block; }
+    .hero-body { background: #fff; padding: 1.25rem; }
+    .badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 999px; margin-bottom: 8px; letter-spacing: 0.03em; }
+    .badge-id { background: #e8f0fe; color: #1a56db; }
+    .pet-name { font-size: 28px; font-weight: 700; color: #1a1a1a; }
+    .pet-sub { font-size: 14px; color: #666; margin-top: 3px; }
+
+    .reward-card { background: #fffbf0; border: 1.5px solid #EF9F27; border-radius: 14px; padding: 1rem 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 14px; }
+    .reward-icon { font-size: 32px; flex-shrink: 0; }
+    .reward-label { font-size: 13px; color: #7a5a00; font-weight: 500; }
+    .reward-text { font-size: 15px; font-weight: 700; color: #3d2c00; margin-top: 2px; line-height: 1.4; }
+
+    .card { background: #fff; border-radius: 14px; padding: 1rem 1.25rem; margin-bottom: 1rem; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
+    .card-title { font-size: 11px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+
+    .info-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: #888; display: flex; align-items: center; gap: 6px; }
+    .info-value { color: #1a1a1a; font-weight: 600; text-align: right; max-width: 60%; }
+
+    .chip-box { background: #f0f4ff; border-radius: 10px; padding: 10px 14px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 2px; }
+    .chip-number { font-size: 18px; font-weight: 700; color: #1a3a8f; letter-spacing: 0.05em; font-family: 'Courier New', monospace; }
+    .chip-sub { font-size: 12px; color: #5567a0; }
+
+    .contact-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 15px; border-radius: 12px; border: none; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 10px; text-decoration: none; transition: opacity 0.15s; }
+    .contact-btn:last-child { margin-bottom: 0; }
+    .contact-btn:hover { opacity: 0.88; }
+    .btn-call { background: #1D9E75; color: white; }
+    .btn-whatsapp { background: #25D366; color: white; }
+
+    .vaccine-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; gap: 8px; }
+    .vaccine-row:last-child { border-bottom: none; }
+    .vac-name { color: #1a1a1a; font-weight: 500; flex: 1; }
+    .vac-date { color: #888; font-size: 12px; white-space: nowrap; }
+    .vac-ok { background: #EAF3DE; color: #3B6D11; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+    .vac-pending { background: #FFF3CD; color: #856404; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+
+    .trat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+    .trat-row:last-child { border-bottom: none; }
+    .trat-label { color: #888; }
+    .trat-value { color: #1a1a1a; font-weight: 500; text-align: right; }
+
+    .vet-name { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+    .vet-clinic { font-size: 13px; color: #555; margin-top: 2px; }
+    .vet-phones { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+    .vet-phone-link { font-size: 14px; color: #1D9E75; text-decoration: none; font-weight: 500; }
+
+    .gov-badge { display: flex; align-items: center; gap: 8px; background: #f5f8ff; border-radius: 10px; padding: 8px 12px; margin-top: 10px; border: 1px solid #dce5ff; }
+    .gov-text { font-size: 12px; color: #4a5fa0; font-weight: 500; }
+
+    .footer { text-align: center; font-size: 12px; color: #aaa; padding: 1rem 0 2rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HERO -->
+    <div class="hero">
+      <img src="foto.jpg" alt="Foto de Pluto" />
+      <div class="hero-body">
+        <span class="badge badge-id">🐾 Ficha de identificación</span>
+        <div class="pet-name">Pluto Turres</div>
+        <div class="pet-sub">Canino mestizo/Cur boca negra · Macho · Café · 1 año 4 meses</div>
+      </div>
+    </div>
+
+    <!-- RECOMPENSA -->
+    <div class="reward-card">
+      <div class="reward-icon">🏆</div>
+      <div>
+        <div class="reward-label">Si me encuentras perdido</div>
+        <div class="reward-text">Comunícate con mi dueño,<br>¡hay recompensa para ti!</div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="card">
+      <div class="card-title">📞 Contactar al dueño</div>
+      <a class="contact-btn btn-call" href="tel:+56966329116">
+        📞 Llamar a Maximiliano
+      </a>
+      <a class="contact-btn btn-whatsapp" href="https://wa.me/56966329116?text=Hola%20Maximiliano%2C%20encontré%20a%20tu%20perro%20Pluto">
+        💬 WhatsApp a Maximiliano
+      </a>
+    </div>
+
+    <!-- DATOS BÁSICOS -->
+    <div class="card">
+      <div class="card-title">🐕 Datos básicos</div>
+      <div class="info-row">
+        <span class="info-label">🏷️ Nombre completo</span>
+        <span class="info-value">Pluto Turres</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">🔬 Especie / Raza</span>
+        <span class="info-value">Canino mestizo/Cur boca negra</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">⚥ Sexo</span>
+        <span class="info-value">Macho (no esterilizado)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">🎨 Color</span>
+        <span class="info-value">Café</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">⚖️ Peso</span>
+        <span class="info-value">28,5 kg</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">🎂 Edad</span>
+        <span class="info-value">1 año 4 meses</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">📍 Domicilio</span>
+        <span class="info-value">13 Oriente #2000, Iquique</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">👤 Dueño</span>
+        <span class="info-value">Maximiliano Turres</span>
+      </div>
+    </div>
+
+    <!-- MICROCHIP -->
+    <div class="card">
+      <div class="card-title">📡 Microchip</div>
+      <div class="chip-box">
+        <div class="chip-number">900263003147047</div>
+        <div class="chip-sub">Implantado el 17-10-2025 · Vence 23-11-2029</div>
+      </div>
+      <div class="info-row">
+        <span class="info-label">🏥 Implantado por</span>
+        <span class="info-value">Dra. Camila Améstica</span>
+      </div>
+      <div class="info-row" style="border-bottom:none;">
+        <span class="info-label">📌 Registro</span>
+        <span class="info-value">Mascota Protegida</span>
+      </div>
+      <div class="gov-badge">
+        <span>🇨🇱</span>
+        <span class="gov-text">Registrado en plataforma oficial del Gobierno de Chile</span>
+      </div>
+    </div>
+
+    <!-- VACUNAS -->
+    <div class="card">
+      <div class="card-title">💉 Historial de vacunas</div>
+      <div class="vaccine-row">
+        <span class="vac-name">Óctuple anual</span>
+        <span class="vac-date">14-02-2026</span>
+        <span class="vac-ok">Al día</span>
+      </div>
+      <div class="vaccine-row">
+        <span class="vac-name">Antirrábica (Rabguard®)</span>
+        <span class="vac-date">03-03-2026</span>
+        <span class="vac-ok">Al día</span>
+      </div>
+      <div class="vaccine-row">
+        <span class="vac-name">Próxima antirrábica</span>
+        <span class="vac-date">Serie 801800 · Zoetis</span>
+        <span class="vac-pending">03-03-2027</span>
+      </div>
+    </div>
+
+    <!-- TRATAMIENTO -->
+    <div class="card">
+      <div class="card-title">💊 Tratamiento activo</div>
+      <div class="trat-row">
+        <span class="trat-label">Medicamento</span>
+        <span class="trat-value">Cytopoint® 40 mg</span>
+      </div>
+      <div class="trat-row">
+        <span class="trat-label">Principio activo</span>
+        <span class="trat-value">Lokivetmab inyectable</span>
+      </div>
+      <div class="trat-row">
+        <span class="trat-label">Última dosis</span>
+        <span class="trat-value">06-06-2026 · 28,5 kg</span>
+      </div>
+      <div class="trat-row">
+        <span class="trat-label">Laboratorio</span>
+        <span class="trat-value">Zoetis</span>
+      </div>
+    </div>
+
+    <!-- VET -->
+    <div class="card">
+      <div class="card-title">🏥 Médico veterinario</div>
+      <div class="vet-name">Dra. Camila Améstica Cayuqueo</div>
+      <div class="vet-clinic">Yatiri Veterinaria · Iquique</div>
+      <div class="vet-phones">
+        <a class="vet-phone-link" href="tel:+56956719865">📞 +56 9 5671 9865</a>
+        <a class="vet-phone-link" href="tel:+56572798903">📞 +56 57 279 8903</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Ficha de identificación oficial · Pluto Turres · Iquique, Chile
+    </div>
+
+  </div>
+</body>
+</html>
